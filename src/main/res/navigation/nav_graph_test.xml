@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph_test"
+    app:startDestination="@id/lessonTestsFragment">
+
+    <fragment
+        android:id="@+id/lessonTestsFragment"
+        android:name="com.handtruth.javaschool.ui.lessontests.LessonTestsFragment"
+        android:label="LessonTestsFragment"
+        tools:layout="@layout/lesson_tests_fragment">
+        <action
+            android:id="@+id/action_lessonTestsFragment_to_simpleTestFragment"
+            app:destination="@+id/simpleTestFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/simpleTestFragment"
+        android:name="com.handtruth.javaschool.ui.simpletest.SimpleTestFragment"
+        android:label="SimpleTestFragment"
+        tools:layout="@layout/simple_test_fragment">
+        <action
+            android:id="@+id/action_simpleTestFragment_to_lessonTestsFragment"
+            app:destination="@id/lessonTestsFragment"
+            app:popUpTo="@+id/nav_graph_test" />
+        <argument
+            android:name="id"
+            android:defaultValue="0"
+            app:argType="integer" />
+    </fragment>
+</navigation>

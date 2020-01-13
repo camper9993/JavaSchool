@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@id/navigation_modules">
+
+    <fragment
+        android:id="@+id/navigation_user"
+        android:name="com.handtruth.javaschool.ui.user.UserFragment"
+        android:label="@string/bot_profile"
+        tools:layout="@layout/fragment_user"/>
+
+    <fragment
+        android:id="@+id/navigation_modules"
+        android:name="com.handtruth.javaschool.ui.modules.ModulesFragment"
+        android:label="@string/bot_modules"
+        tools:layout="@layout/fragment_modules"/>
+    <fragment
+        android:id="@+id/navigation_tests"
+        android:name="com.handtruth.javaschool.ui.tests.TestsFragment"
+        android:label="@string/bot_tests"
+        tools:layout="@layout/fragment_tests"/>
+
+    <fragment
+        android:id="@+id/navigation_download"
+        android:name="com.handtruth.javaschool.ui.downloader.DownloadFragment"
+        android:label="@string/bot_store"
+        tools:layout="@layout/download_fragment"/>
+
+</navigation>
